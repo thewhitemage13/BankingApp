@@ -1,16 +1,24 @@
-package org.thewhitemage13.user;
+package org.springcorebankapp.user;
 
-import org.thewhitemage13.account.Account;
+import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+import org.springcorebankapp.account.Account;
 
 import java.util.List;
 
+@NoArgsConstructor
+@Entity
+@Table(name = "users")
 public class User {
-    private final int id;
-    private final String login;
-    private final List<Account> accountList;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "login", nullable = false, unique = true)
+    private String login;
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Account> accountList;
 
-    public User(int id, String login, List<Account> accountList) {
-        this.id = id;
+    public User(String login, List<Account> accountList) {
         this.login = login;
         this.accountList = accountList;
     }

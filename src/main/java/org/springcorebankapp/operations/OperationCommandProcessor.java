@@ -1,4 +1,4 @@
-package org.thewhitemage13.operations;
+package org.springcorebankapp.operations;
 
 public interface OperationCommandProcessor {
     void processOperation();

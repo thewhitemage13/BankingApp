@@ -1,14 +1,16 @@
-package org.thewhitemage13.operations.processors;
+package org.springcorebankapp.operations.processors;
 
-import org.thewhitemage13.account.Account;
-import org.thewhitemage13.account.AccountService;
-import org.thewhitemage13.operations.ConsoleOperationType;
-import org.thewhitemage13.operations.OperationCommandProcessor;
-import org.thewhitemage13.user.User;
-import org.thewhitemage13.user.UserService;
+import org.springcorebankapp.account.Account;
+import org.springcorebankapp.account.AccountService;
+import org.springcorebankapp.operations.ConsoleOperationType;
+import org.springcorebankapp.operations.OperationCommandProcessor;
+import org.springcorebankapp.user.User;
+import org.springcorebankapp.user.UserService;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Scanner;
-
+@Component
 public class CloseAccountProcessor implements OperationCommandProcessor {
     private final Scanner scanner;
     private final AccountService accountService;
@@ -29,7 +31,11 @@ public class CloseAccountProcessor implements OperationCommandProcessor {
         User user = userService.findUserById(account.getUserId())
                 .orElseThrow(() -> new IllegalArgumentException("No such user with id=%s"
                         .formatted(account.getUserId())));
+
         user.getAccountList().remove(account);
+
+        System.out.println("Account successfully closed with id=%s"
+                .formatted(accountId));
     }
 
     @Override

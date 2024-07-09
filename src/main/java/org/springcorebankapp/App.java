@@ -1,15 +1,11 @@
-package org.thewhitemage13;
+package org.springcorebankapp;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class App
-{
-
+@SpringBootApplication
+public class App {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("org.thewhitemage13");
-        OperationConsoleListener consoleListener = context.getBean(OperationConsoleListener.class);
-        consoleListener.start();
-        consoleListener.listenUpdates();
-        consoleListener.endListed();
+        SpringApplication.run(App.class, args);
     }
 }

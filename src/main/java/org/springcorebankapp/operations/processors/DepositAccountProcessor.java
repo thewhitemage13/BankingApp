@@ -1,11 +1,12 @@
-package org.thewhitemage13.operations.processors;
+package org.springcorebankapp.operations.processors;
 
-import org.thewhitemage13.account.AccountService;
-import org.thewhitemage13.operations.ConsoleOperationType;
-import org.thewhitemage13.operations.OperationCommandProcessor;
+import org.springcorebankapp.account.AccountService;
+import org.springcorebankapp.operations.ConsoleOperationType;
+import org.springcorebankapp.operations.OperationCommandProcessor;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
-
+@Component
 public class DepositAccountProcessor implements OperationCommandProcessor {
     private final Scanner scanner;
     private AccountService accountService;

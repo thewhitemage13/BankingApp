@@ -1,13 +1,22 @@
-package org.thewhitemage13.operations.processors;
+package org.springcorebankapp.operations.processors;
 
-import org.thewhitemage13.account.AccountService;
-import org.thewhitemage13.operations.ConsoleOperationType;
-import org.thewhitemage13.operations.OperationCommandProcessor;
-import org.thewhitemage13.user.UserService;
+import org.springcorebankapp.account.AccountRepository;
+import org.springcorebankapp.account.AccountService;
+import org.springcorebankapp.operations.ConsoleOperationType;
+import org.springcorebankapp.operations.OperationCommandProcessor;
+import org.springcorebankapp.user.User;
+import org.springcorebankapp.user.UserRepository;
+import org.springcorebankapp.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Scanner;
-
+@Component
+@Transactional
 public class CreateAccountProcessor implements OperationCommandProcessor {
+    @Autowired
+    private AccountRepository accountRepository;
     private final Scanner scanner;
     private final AccountService accountService;
     private final UserService userService;
@@ -27,7 +36,7 @@ public class CreateAccountProcessor implements OperationCommandProcessor {
                         .formatted(userId)));
         var account =  accountService.createAccount(user);
         user.getAccountList().add(account);
-
+        accountRepository.save(account);
         System.out.println("New account created with Id: %s for user: %s"
                 .formatted(account.getId(), user.getLogin()));
     }

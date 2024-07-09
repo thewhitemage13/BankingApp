@@ -1,22 +1,27 @@
-package org.thewhitemage13.user;
 
-import org.thewhitemage13.account.Account;
-import org.thewhitemage13.account.AccountService;
+package org.springcorebankapp.user;
+
+import org.springcorebankapp.account.AccountRepository;
+import org.springcorebankapp.account.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
+@Service
+@Transactional
 public class UserService {
-
+    @Autowired
+    private UserRepository userRepository;
     private final Map<Integer, User> userMap;
     private final Set<String> takenLogins;
     private final AccountService accountService;
-    private int idCounter;
 
     public UserService(AccountService accountService) {
         this.accountService = accountService;
         this.userMap = new HashMap<>();
         this.takenLogins = new HashSet<>();
-        this.idCounter = 0;
     }
 
     public User createUser(String login) {
@@ -26,22 +31,24 @@ public class UserService {
         }
 
         takenLogins.add(login);
-        idCounter++;
-        var newUser = new User(idCounter, login, new ArrayList<>());
 
+        var newUser = new User(login, new ArrayList<>());
+        userRepository.save(newUser);
         var newAccount = accountService.createAccount(newUser);
+
         newUser.getAccountList().add(newAccount);
 
         userMap.put(newUser.getId(), newUser);
+
         return newUser;
     }
 
     public Optional<User> findUserById(int id) {
-        return Optional.ofNullable(userMap.get(id));
+        return userRepository.findById(id);
     }
 
     public List<User> getAllUsers() {
-        return userMap.values().stream().toList();
+        return userRepository.findAll();
     }
 
 }

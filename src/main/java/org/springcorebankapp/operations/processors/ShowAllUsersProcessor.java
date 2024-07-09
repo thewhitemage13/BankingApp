@@ -1,13 +1,20 @@
-package org.thewhitemage13.operations.processors;
+package org.springcorebankapp.operations.processors;
 
-import org.thewhitemage13.operations.ConsoleOperationType;
-import org.thewhitemage13.operations.OperationCommandProcessor;
-import org.thewhitemage13.user.User;
-import org.thewhitemage13.user.UserService;
+import org.springcorebankapp.operations.ConsoleOperationType;
+import org.springcorebankapp.operations.OperationCommandProcessor;
+import org.springcorebankapp.user.User;
+import org.springcorebankapp.user.UserRepository;
+import org.springcorebankapp.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+@Component
+@Transactional
 public class ShowAllUsersProcessor implements OperationCommandProcessor {
+    @Autowired
+    private UserRepository userRepository;
     private final UserService userService;
 
     public ShowAllUsersProcessor(UserService userService) {
@@ -18,7 +25,10 @@ public class ShowAllUsersProcessor implements OperationCommandProcessor {
     public void processOperation() {
         List<User> users = userService.getAllUsers();
         System.out.println("List of all users: ");
-        users.forEach(System.out::println);
+        List<User> all = userRepository.findAll();
+        for (User user : all) {
+            System.out.println(user);
+        }
     }
 
     @Override

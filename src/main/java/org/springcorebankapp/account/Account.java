@@ -1,12 +1,21 @@
-package org.thewhitemage13.account;
+package org.springcorebankapp.account;
 
+import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Entity
+@Table(name = "accounts")
 public class Account {
-    private final int id;
-    private final int userId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "user_id")
+    private int userId;
+    @Column(name = "money_amount")
     private int moneyAmount;
 
-    public Account(int id, int userId, int moneyAmount) {
-        this.id = id;
+    public Account(int userId, int moneyAmount) {
         this.userId = userId;
         this.moneyAmount = moneyAmount;
     }
