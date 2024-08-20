@@ -5,6 +5,7 @@
 The application includes classes for representing songs, albums, artists and genres, and interfaces for playing and managing the collection. A user can add, delete, and play songs, as well as view information about songs, albums, and artists.
 
 ## Functionality
+
 The project includes abilities such as:
 
 - User Creation
@@ -22,6 +23,10 @@ The project includes abilities such as:
 - You cannot open an account for a non-existing user
 - You cannot debit more money from the account than there is in the account
 - If a user has one account, you cannot close it
+
+## Architecture
+
+The project was developed using OOP and S.O.L.I.D. principles, resulting in a structured and scalable architecture. Care was taken to optimize collection handling and database performance.
 
 ## Technologies
 
