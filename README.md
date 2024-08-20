@@ -62,3 +62,10 @@ The project utilizes the following technologies and tools:
 3. Run docker-compose.yml:
    ```bash
    docker-compose up -d
+
+## Achievements
+
+- Effective implementation of OOP and S.O.L.I.D. principles.
+- Creating a structured and scalable architecture.
+- Optimization of database performance.
+- Improved skills in working with Spring framework.
