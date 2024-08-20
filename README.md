@@ -49,20 +49,6 @@ The project utilizes the following technologies and tools:
 - Installed JDK (Java Development Kit).
 - Installed Maven.
 
-#### Installation Steps
-
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/banking-app.git
-   cd banking-app
-2. Build and run the project using Maven:
-   ```bash
-   mvn clean install
-   mvn spring-boot:run
-3. Run docker-compose.yml:
-   ```bash
-   docker-compose up -d
-
 ## Achievements
 
 - Effective implementation of OOP and S.O.L.I.D. principles.
