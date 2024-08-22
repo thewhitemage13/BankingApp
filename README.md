@@ -8,14 +8,14 @@ The application includes classes for representing songs, albums, artists and gen
 
 The project includes abilities such as:
 
-- User Creation
-- View user by id
-- View all users
-- Account opening
-- Account deletion
-- Account crediting
-- Account debit
-- Transferring money between accounts
+- **[User Creation](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
+- **[View user by id](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
+- **[View all users](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
+- **[Account opening](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
+- **[Account deletion](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
+- **[Account crediting](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
+- **[Account debit](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
+- **[Transferring money between accounts](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
 
 ## Rules of Use
 
