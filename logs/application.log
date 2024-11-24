@@ -1,0 +1,1226 @@
+2024-11-24T15:32:19.332+01:00  INFO 12708 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 12708 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T15:32:19.334+01:00  INFO 12708 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T15:32:20.275+01:00  INFO 12708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T15:32:20.348+01:00  INFO 12708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-11-24T15:32:21.404+01:00  INFO 12708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-24T15:32:21.422+01:00  INFO 12708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T15:32:21.422+01:00  INFO 12708 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T15:32:21.503+01:00  INFO 12708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T15:32:21.503+01:00  INFO 12708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2114 ms
+2024-11-24T15:32:21.794+01:00  INFO 12708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T15:32:22.019+01:00  INFO 12708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T15:32:22.101+01:00  INFO 12708 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T15:32:22.726+01:00  INFO 12708 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T15:32:22.784+01:00  INFO 12708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T15:32:23.560+01:00  INFO 12708 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47c96f2c
+2024-11-24T15:32:23.561+01:00  INFO 12708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T15:32:24.023+01:00  WARN 12708 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T15:32:25.266+01:00  INFO 12708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T15:32:25.778+01:00  INFO 12708 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T15:32:26.367+01:00  WARN 12708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T15:32:27.131+01:00  INFO 12708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-24T15:32:27.138+01:00  INFO 12708 --- [main] org.springcorebankapp.App                : Started App in 8.49 seconds (process running for 11.471)
+2024-11-24T15:33:40.906+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24T15:33:40.906+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-24T15:33:40.907+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-24T15:33:41.055+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод CrudRepository.save(..) выполнен успешно. Результат: User{id=2, login='thewhitemagelogin', accountList=[]}
+2024-11-24T15:33:41.212+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод UserRepository.findByLogin(..) выполнен успешно. Результат: Optional[User{id=2, login='thewhitemagelogin', accountList=[]}]
+2024-11-24T15:33:41.214+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод AccountProperties.getDefaultAccountAmount() выполнен успешно. Результат: 500
+2024-11-24T15:33:41.234+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод CrudRepository.save(..) выполнен успешно. Результат: Account{id=3, userId=2, moneyAmount=500}
+2024-11-24T15:33:41.237+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод AccountService.createAccount(..) выполнен успешно. Результат: Account{id=3, userId=2, moneyAmount=500}
+2024-11-24T15:33:41.237+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод UserService.createUser(..) выполнен успешно. Результат: null
+2024-11-24T15:33:41.248+01:00  INFO 12708 --- [http-nio-8080-exec-2] o.s.logging.LoggingAspect                : Метод UserController.createUser(..) выполнен успешно. Результат: <200 OK OK,User with login = thewhitemagelogin crated,[]>
+2024-11-24T15:34:29.278+01:00  INFO 12708 --- [http-nio-8080-exec-3] o.s.logging.LoggingAspect                : Метод CrudRepository.findById(..) выполнен успешно. Результат: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T15:34:29.280+01:00  INFO 12708 --- [http-nio-8080-exec-3] o.s.logging.LoggingAspect                : Метод UserService.findUserById(..) выполнен успешно. Результат: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T15:34:29.281+01:00  INFO 12708 --- [http-nio-8080-exec-3] o.s.logging.LoggingAspect                : Метод UserController.findUserById(..) выполнен успешно. Результат: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T15:34:51.091+01:00  INFO 12708 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T15:34:51.092+01:00  INFO 12708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T15:34:51.095+01:00  INFO 12708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T17:49:08.971+01:00  INFO 24396 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 24396 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T17:49:08.975+01:00  INFO 24396 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T17:49:09.761+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T17:49:09.763+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T17:49:09.903+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 2 JPA repository interfaces.
+2024-11-24T17:49:09.923+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T17:49:09.924+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T17:49:09.938+01:00  INFO 24396 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-24T17:49:09.938+01:00  INFO 24396 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-11-24T17:49:09.938+01:00  INFO 24396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2024-11-24T17:49:10.827+01:00  INFO 24396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T17:49:10.842+01:00  INFO 24396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T17:49:10.843+01:00  INFO 24396 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T17:49:10.910+01:00  INFO 24396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T17:49:10.910+01:00  INFO 24396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1888 ms
+2024-11-24T17:49:11.112+01:00  INFO 24396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T17:49:11.259+01:00  INFO 24396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T17:49:11.318+01:00  INFO 24396 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T17:49:11.767+01:00  INFO 24396 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T17:49:11.810+01:00  INFO 24396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T17:49:12.089+01:00  INFO 24396 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1aaf46e6
+2024-11-24T17:49:12.090+01:00  INFO 24396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T17:49:12.232+01:00  WARN 24396 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T17:49:13.241+01:00  INFO 24396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T17:49:13.358+01:00  INFO 24396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T17:49:13.909+01:00  WARN 24396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T17:49:15.048+01:00  INFO 24396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-11-24T17:49:15.054+01:00  INFO 24396 --- [main] org.springcorebankapp.App                : Started App in 6.568 seconds (process running for 32.283)
+2024-11-24T17:49:32.951+01:00  INFO 24396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T17:49:32.953+01:00  INFO 24396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T17:49:32.956+01:00  INFO 24396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T18:09:50.060+01:00  INFO 14628 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 14628 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:09:50.062+01:00  INFO 14628 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:09:50.567+01:00  INFO 14628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:09:50.568+01:00  INFO 14628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:09:50.680+01:00  INFO 14628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 2 JPA repository interfaces.
+2024-11-24T18:09:50.692+01:00  INFO 14628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:09:50.693+01:00  INFO 14628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:09:50.708+01:00  WARN 14628 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userRepository' defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration] for bean 'userRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
+2024-11-24T18:09:50.714+01:00  INFO 14628 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:09:50.729+01:00 ERROR 14628 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userRepository', defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:10:19.845+01:00  INFO 20432 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 20432 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:10:19.848+01:00  INFO 20432 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:10:20.415+01:00  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:10:20.417+01:00  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:10:20.528+01:00  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 2 JPA repository interfaces.
+2024-11-24T18:10:20.541+01:00  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:10:20.542+01:00  INFO 20432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:10:20.557+01:00  WARN 20432 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'accountRepository' defined in org.springcorebankapp.account.AccountRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.account.AccountRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration] for bean 'accountRepository' since there is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.account.AccountRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
+2024-11-24T18:10:20.563+01:00  INFO 20432 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:10:20.577+01:00 ERROR 20432 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'accountRepository', defined in org.springcorebankapp.account.AccountRepository defined in @EnableRedisRepositories declared on RedisRepositoriesRegistrar.EnableRedisRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.account.AccountRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:17:37.380+01:00  INFO 20628 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 20628 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:17:37.382+01:00  INFO 20628 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:17:37.779+01:00  INFO 20628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:17:37.780+01:00  INFO 20628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:17:37.905+01:00  INFO 20628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 Redis repository interface.
+2024-11-24T18:17:38.039+01:00  INFO 20628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:17:38.040+01:00  INFO 20628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:17:38.057+01:00  WARN 20628 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userRepository' defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'userRepository' since there is already [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration] bound.
+2024-11-24T18:17:38.063+01:00  INFO 20628 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:17:38.077+01:00 ERROR 20628 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userRepository', defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:18:31.387+01:00  INFO 22116 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 22116 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:18:31.389+01:00  INFO 22116 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:18:31.755+01:00  INFO 22116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:18:31.755+01:00  INFO 22116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:18:31.882+01:00  INFO 22116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 Redis repository interface.
+2024-11-24T18:18:32.018+01:00  INFO 22116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:18:32.019+01:00  INFO 22116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:18:32.035+01:00  WARN 22116 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userRepository' defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'userRepository' since there is already [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration] bound.
+2024-11-24T18:18:32.041+01:00  INFO 22116 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:18:32.056+01:00 ERROR 22116 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userRepository', defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:23:20.081+01:00  INFO 23564 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 23564 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:23:20.083+01:00  INFO 23564 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:23:20.456+01:00  INFO 23564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:23:20.456+01:00  INFO 23564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:23:20.571+01:00  INFO 23564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 Redis repository interface.
+2024-11-24T18:23:20.707+01:00  INFO 23564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:23:20.708+01:00  INFO 23564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:23:20.725+01:00  WARN 23564 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userRepository' defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'userRepository' since there is already [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration] bound.
+2024-11-24T18:23:20.732+01:00  INFO 23564 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:23:20.746+01:00 ERROR 23564 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userRepository', defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:24:15.828+01:00  INFO 12132 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 12132 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:24:15.830+01:00  INFO 12132 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:24:16.203+01:00  INFO 12132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:24:16.203+01:00  INFO 12132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:24:16.335+01:00  INFO 12132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 Redis repository interface.
+2024-11-24T18:24:16.337+01:00  INFO 12132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:24:16.337+01:00  INFO 12132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:24:16.343+01:00  WARN 12132 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'userRepository' defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaConfiguration] for bean 'userRepository' since there is already [Root bean: class [org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration] bound.
+2024-11-24T18:24:16.349+01:00  INFO 12132 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:24:16.363+01:00 ERROR 12132 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'userRepository', defined in org.springcorebankapp.user.UserRepository defined in @EnableJpaRepositories declared on JpaConfiguration, could not be registered. A bean with that name has already been defined in org.springcorebankapp.user.UserRepository defined in @EnableRedisRepositories declared on RedisConfiguration and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2024-11-24T18:32:39.790+01:00  INFO 13852 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 13852 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:32:39.792+01:00  INFO 13852 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:32:40.159+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:32:40.159+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:32:40.270+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 Redis repository interface.
+2024-11-24T18:32:40.271+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:32:40.271+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:32:40.280+01:00  INFO 13852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2024-11-24T18:32:40.984+01:00  INFO 13852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T18:32:40.993+01:00  INFO 13852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T18:32:40.994+01:00  INFO 13852 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T18:32:41.039+01:00  INFO 13852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T18:32:41.039+01:00  INFO 13852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1214 ms
+2024-11-24T18:32:41.190+01:00  INFO 13852 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T18:32:41.229+01:00  INFO 13852 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T18:32:41.255+01:00  INFO 13852 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T18:32:41.480+01:00  INFO 13852 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T18:32:41.500+01:00  INFO 13852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T18:32:41.624+01:00  INFO 13852 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55d99dc3
+2024-11-24T18:32:41.626+01:00  INFO 13852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T18:32:41.653+01:00  WARN 13852 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T18:32:42.305+01:00  INFO 13852 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T18:32:42.345+01:00  INFO 13852 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:32:42.394+01:00  WARN 13852 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes\org\springcorebankapp\account\AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountService': Unsatisfied dependency expressed through field 'accountRepository': No qualifying bean of type 'org.springcorebankapp.account.AccountRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-11-24T18:32:42.394+01:00  INFO 13852 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:32:42.397+01:00  INFO 13852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T18:32:42.474+01:00  INFO 13852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T18:32:42.475+01:00  INFO 13852 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-24T18:32:42.484+01:00  INFO 13852 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24T18:32:42.501+01:00 ERROR 13852 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field accountRepository in org.springcorebankapp.account.AccountService required a bean of type 'org.springcorebankapp.account.AccountRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springcorebankapp.account.AccountRepository' in your configuration.
+
+2024-11-24T18:44:29.377+01:00  INFO 24800 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 24800 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:44:29.379+01:00  INFO 24800 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:44:29.752+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:44:29.752+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:44:29.860+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2024-11-24T18:44:29.862+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:44:29.863+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:44:29.878+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 Redis repository interfaces.
+2024-11-24T18:44:29.879+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:44:29.879+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:44:29.883+01:00  INFO 24800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interface.
+2024-11-24T18:44:30.603+01:00  INFO 24800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T18:44:30.613+01:00  INFO 24800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T18:44:30.613+01:00  INFO 24800 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T18:44:30.657+01:00  INFO 24800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T18:44:30.657+01:00  INFO 24800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1242 ms
+2024-11-24T18:44:30.819+01:00  INFO 24800 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T18:44:30.858+01:00  INFO 24800 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T18:44:30.880+01:00  INFO 24800 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T18:44:31.101+01:00  INFO 24800 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T18:44:31.121+01:00  INFO 24800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T18:44:31.250+01:00  INFO 24800 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42503099
+2024-11-24T18:44:31.252+01:00  INFO 24800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T18:44:31.294+01:00  WARN 24800 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T18:44:31.972+01:00  INFO 24800 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T18:44:32.008+01:00  INFO 24800 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:44:32.891+01:00  WARN 24800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T18:44:33.457+01:00  INFO 24800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-11-24T18:44:33.464+01:00  INFO 24800 --- [main] org.springcorebankapp.App                : Started App in 4.44 seconds (process running for 4.861)
+2024-11-24T18:44:45.039+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24T18:44:45.039+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-24T18:44:45.040+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-24T18:44:45.550+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:44:45.553+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:44:45.575+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:44:45.575+01:00  INFO 24800 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:04.991+01:00  INFO 24800 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:45:04.991+01:00  INFO 24800 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:45:04.992+01:00  INFO 24800 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:04.993+01:00  INFO 24800 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:06.135+01:00  INFO 24800 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:45:06.135+01:00  INFO 24800 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:45:06.136+01:00  INFO 24800 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:06.136+01:00  INFO 24800 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:06.905+01:00  INFO 24800 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:45:06.905+01:00  INFO 24800 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:45:06.906+01:00  INFO 24800 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:06.906+01:00  INFO 24800 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:07.725+01:00  INFO 24800 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:45:07.725+01:00  INFO 24800 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:45:07.726+01:00  INFO 24800 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:07.726+01:00  INFO 24800 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:08.751+01:00  INFO 24800 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}]
+2024-11-24T18:45:08.752+01:00  INFO 24800 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}
+2024-11-24T18:45:08.752+01:00  INFO 24800 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:08.753+01:00  INFO 24800 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectController      : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]},[]>
+2024-11-24T18:45:14.829+01:00  INFO 24800 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:45:14.831+01:00  INFO 24800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T18:45:14.833+01:00  INFO 24800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T18:47:14.908+01:00  INFO 25536 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 25536 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:47:14.911+01:00  INFO 25536 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:47:15.301+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:47:15.301+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:47:15.413+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2024-11-24T18:47:15.416+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:47:15.416+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:47:15.436+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 Redis repository interfaces.
+2024-11-24T18:47:15.436+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:47:15.436+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:47:15.440+01:00  INFO 25536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interface.
+2024-11-24T18:47:16.145+01:00  INFO 25536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T18:47:16.156+01:00  INFO 25536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T18:47:16.156+01:00  INFO 25536 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T18:47:16.203+01:00  INFO 25536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T18:47:16.204+01:00  INFO 25536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1258 ms
+2024-11-24T18:47:16.361+01:00  INFO 25536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T18:47:16.403+01:00  INFO 25536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T18:47:16.427+01:00  INFO 25536 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T18:47:16.675+01:00  INFO 25536 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T18:47:16.695+01:00  INFO 25536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T18:47:16.824+01:00  INFO 25536 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ee456c7
+2024-11-24T18:47:16.824+01:00  INFO 25536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T18:47:16.851+01:00  WARN 25536 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T18:47:17.514+01:00  INFO 25536 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T18:47:17.548+01:00  INFO 25536 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:47:18.418+01:00  WARN 25536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T18:47:18.983+01:00  INFO 25536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-11-24T18:47:18.989+01:00  INFO 25536 --- [main] org.springcorebankapp.App                : Started App in 4.481 seconds (process running for 4.908)
+2024-11-24T18:47:39.659+01:00  INFO 25536 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24T18:47:39.659+01:00  INFO 25536 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-24T18:47:39.661+01:00  INFO 25536 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-24T18:47:39.704+01:00  WARN 25536 --- [http-nio-7070-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Integer is not present]
+2024-11-24T18:48:20.867+01:00  INFO 25536 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:48:20.867+01:00 ERROR 25536 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:48:20.876+01:00  INFO 25536 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:20.877+01:00  INFO 25536 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:25.744+01:00  INFO 25536 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:48:25.745+01:00 ERROR 25536 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:48:25.747+01:00  INFO 25536 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:25.748+01:00  INFO 25536 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:26.597+01:00  INFO 25536 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:48:26.597+01:00 ERROR 25536 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:48:26.599+01:00  INFO 25536 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:26.599+01:00  INFO 25536 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:48:49.858+01:00  INFO 25536 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:48:49.860+01:00  INFO 25536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T18:48:49.862+01:00  INFO 25536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T18:48:53.251+01:00  INFO 4648 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 4648 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:48:53.254+01:00  INFO 4648 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:48:53.635+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:48:53.636+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:48:53.744+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2024-11-24T18:48:53.746+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:48:53.747+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:48:53.763+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 Redis repository interfaces.
+2024-11-24T18:48:53.763+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:48:53.763+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:48:53.768+01:00  INFO 4648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interface.
+2024-11-24T18:48:54.521+01:00  INFO 4648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T18:48:54.530+01:00  INFO 4648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T18:48:54.530+01:00  INFO 4648 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T18:48:54.576+01:00  INFO 4648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T18:48:54.576+01:00  INFO 4648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1288 ms
+2024-11-24T18:48:54.746+01:00  INFO 4648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T18:48:54.786+01:00  INFO 4648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T18:48:54.814+01:00  INFO 4648 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T18:48:55.069+01:00  INFO 4648 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T18:48:55.090+01:00  INFO 4648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T18:48:55.216+01:00  INFO 4648 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60844992
+2024-11-24T18:48:55.216+01:00  INFO 4648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T18:48:55.243+01:00  WARN 4648 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T18:48:55.927+01:00  INFO 4648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T18:48:55.964+01:00  INFO 4648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:48:56.934+01:00  WARN 4648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T18:48:57.563+01:00  INFO 4648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-11-24T18:48:57.571+01:00  INFO 4648 --- [main] org.springcorebankapp.App                : Started App in 4.656 seconds (process running for 5.095)
+2024-11-24T18:48:59.027+01:00  INFO 4648 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24T18:48:59.027+01:00  INFO 4648 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-24T18:48:59.028+01:00  INFO 4648 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-24T18:49:09.051+01:00  INFO 4648 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:49:09.052+01:00 ERROR 4648 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:49:09.059+01:00  INFO 4648 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:49:09.060+01:00  INFO 4648 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:49:14.975+01:00  INFO 4648 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:49:14.976+01:00 ERROR 4648 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:49:14.978+01:00  INFO 4648 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:49:14.978+01:00  INFO 4648 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:50:04.239+01:00  INFO 4648 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:50:04.242+01:00  INFO 4648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T18:50:04.244+01:00  INFO 4648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T18:50:08.980+01:00  INFO 18188 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 18188 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-11-24T18:50:08.983+01:00  INFO 18188 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T18:50:09.325+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:50:09.325+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:50:09.434+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2024-11-24T18:50:09.437+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:50:09.437+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-24T18:50:09.453+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 Redis repository interfaces.
+2024-11-24T18:50:09.453+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24T18:50:09.454+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24T18:50:09.458+01:00  INFO 18188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interface.
+2024-11-24T18:50:10.182+01:00  INFO 18188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-11-24T18:50:10.192+01:00  INFO 18188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T18:50:10.193+01:00  INFO 18188 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-11-24T18:50:10.239+01:00  INFO 18188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T18:50:10.239+01:00  INFO 18188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
+2024-11-24T18:50:10.399+01:00  INFO 18188 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T18:50:10.445+01:00  INFO 18188 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-24T18:50:10.470+01:00  INFO 18188 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T18:50:10.742+01:00  INFO 18188 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24T18:50:10.763+01:00  INFO 18188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T18:50:10.906+01:00  INFO 18188 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b360972
+2024-11-24T18:50:10.908+01:00  INFO 18188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T18:50:10.935+01:00  WARN 18188 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T18:50:11.587+01:00  INFO 18188 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T18:50:11.621+01:00  INFO 18188 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:50:12.659+01:00  WARN 18188 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T18:50:13.297+01:00  INFO 18188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-11-24T18:50:13.306+01:00  INFO 18188 --- [main] org.springcorebankapp.App                : Started App in 4.612 seconds (process running for 6.387)
+2024-11-24T18:50:13.400+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24T18:50:13.400+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-24T18:50:13.401+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-24T18:50:13.921+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional.empty
+2024-11-24T18:50:13.922+01:00 ERROR 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method raised an exception: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+
+java.lang.RuntimeException: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:48) ~[classes/:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springcorebankapp.account.AccountService.findAccountById(AccountService.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountService$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at org.springcorebankapp.account.AccountController.findAccountById(AccountController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springcorebankapp.account.AccountController$$SpringCGLIB$$0.findAccountById(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: javax.security.auth.login.AccountNotFoundException: Account with id = 1 not found
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$1(AccountService.java:46) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.springcorebankapp.account.AccountService.lambda$findAccountById$2(AccountService.java:46) ~[classes/:na]
+	... 111 common frames omitted
+
+2024-11-24T18:50:13.933+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:50:13.934+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <500 INTERNAL_SERVER_ERROR Internal Server Error,[]>
+2024-11-24T18:51:11.321+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The ListCrudRepository.findAll() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:11.324+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The UserService.getAllUsers() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:11.339+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:11.339+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectController      : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:26.951+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The ListCrudRepository.findAll() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:26.951+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The UserService.getAllUsers() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:26.952+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:26.952+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectController      : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:27.618+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The ListCrudRepository.findAll() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:27.618+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The UserService.getAllUsers() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:27.619+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:27.619+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectController      : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:28.227+01:00  INFO 18188 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The ListCrudRepository.findAll() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:28.228+01:00  INFO 18188 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The UserService.getAllUsers() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:28.228+01:00  INFO 18188 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectService         : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:28.228+01:00  INFO 18188 --- [http-nio-7070-exec-7] o.s.logging.LoggingAspectController      : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:28.845+01:00  INFO 18188 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The ListCrudRepository.findAll() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:28.845+01:00  INFO 18188 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The UserService.getAllUsers() method executed successfully. Result: [User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}]
+2024-11-24T18:51:28.846+01:00  INFO 18188 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectService         : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:51:28.846+01:00  INFO 18188 --- [http-nio-7070-exec-8] o.s.logging.LoggingAspectController      : The UserController.getAllUsers() method executed successfully. Result: <200 OK OK,[User{id=1, login='login1', accountList=[Account{id=2, userId=1, moneyAmount=1000}]}, User{id=2, login='thewhitemagelogin', accountList=[Account{id=3, userId=2, moneyAmount=500}]}],[]>
+2024-11-24T18:52:17.805+01:00  INFO 18188 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=1, moneyAmount=1000}]
+2024-11-24T18:52:17.807+01:00  INFO 18188 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=1, moneyAmount=1000}
+2024-11-24T18:52:17.808+01:00  INFO 18188 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:17.808+01:00  INFO 18188 --- [http-nio-7070-exec-5] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:20.393+01:00  INFO 18188 --- [http-nio-7070-exec-10] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=1, moneyAmount=1000}]
+2024-11-24T18:52:20.393+01:00  INFO 18188 --- [http-nio-7070-exec-10] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=1, moneyAmount=1000}
+2024-11-24T18:52:20.394+01:00  INFO 18188 --- [http-nio-7070-exec-10] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:20.394+01:00  INFO 18188 --- [http-nio-7070-exec-10] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:21.079+01:00  INFO 18188 --- [http-nio-7070-exec-2] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=1, moneyAmount=1000}]
+2024-11-24T18:52:21.079+01:00  INFO 18188 --- [http-nio-7070-exec-2] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=1, moneyAmount=1000}
+2024-11-24T18:52:21.079+01:00  INFO 18188 --- [http-nio-7070-exec-2] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:21.079+01:00  INFO 18188 --- [http-nio-7070-exec-2] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:21.662+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=1, moneyAmount=1000}]
+2024-11-24T18:52:21.662+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=1, moneyAmount=1000}
+2024-11-24T18:52:21.662+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:21.663+01:00  INFO 18188 --- [http-nio-7070-exec-1] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:22.410+01:00  INFO 18188 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=1, moneyAmount=1000}]
+2024-11-24T18:52:22.411+01:00  INFO 18188 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=1, moneyAmount=1000}
+2024-11-24T18:52:22.411+01:00  INFO 18188 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:22.411+01:00  INFO 18188 --- [http-nio-7070-exec-3] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=1, moneyAmount=1000},[]>
+2024-11-24T18:52:26.255+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=3, userId=2, moneyAmount=500}]
+2024-11-24T18:52:26.256+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=3, userId=2, moneyAmount=500}
+2024-11-24T18:52:26.256+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:26.256+01:00  INFO 18188 --- [http-nio-7070-exec-4] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:27.230+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=3, userId=2, moneyAmount=500}]
+2024-11-24T18:52:27.231+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=3, userId=2, moneyAmount=500}
+2024-11-24T18:52:27.231+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:27.231+01:00  INFO 18188 --- [http-nio-7070-exec-9] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:28.091+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=3, userId=2, moneyAmount=500}]
+2024-11-24T18:52:28.091+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=3, userId=2, moneyAmount=500}
+2024-11-24T18:52:28.092+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectService         : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:28.092+01:00  INFO 18188 --- [http-nio-7070-exec-6] o.s.logging.LoggingAspectController      : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=3, userId=2, moneyAmount=500},[]>
+2024-11-24T18:52:46.925+01:00  INFO 18188 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24T18:52:46.928+01:00  INFO 18188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T18:52:46.930+01:00  INFO 18188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

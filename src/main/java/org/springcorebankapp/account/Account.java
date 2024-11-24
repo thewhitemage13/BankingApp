@@ -1,12 +1,21 @@
 package org.springcorebankapp.account;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.redis.core.RedisHash;
+
+import java.io.Serializable;
+import java.util.Objects;
 
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
+@RedisHash("Account")
 @Table(name = "accounts")
-public class Account {
+public class Account implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -20,20 +29,17 @@ public class Account {
         this.moneyAmount = moneyAmount;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return id == account.id && userId == account.userId && moneyAmount == account.moneyAmount;
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public int getMoneyAmount() {
-        return moneyAmount;
-    }
-
-    public void setMoneyAmount(int moneyAmount) {
-        this.moneyAmount = moneyAmount;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, userId, moneyAmount);
     }
 
     @Override

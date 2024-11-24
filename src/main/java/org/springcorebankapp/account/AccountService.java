@@ -1,65 +1,79 @@
 package org.springcorebankapp.account;
 
+import org.springcorebankapp.exception.UserNotFoundException;
+import org.springcorebankapp.redis.repository.AccountRedisRepository;
 import org.springcorebankapp.user.User;
+import org.springcorebankapp.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
+import javax.security.auth.login.AccountNotFoundException;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 
-@Service // над ней повешена аннотация Component
+@Service
 @Transactional
 public class AccountService {
     @Autowired
     private AccountRepository accountRepository;
-    private final Map<Integer, Account> accountMap;
     private final AccountProperties accountProperties;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private AccountRedisRepository accountRedisRepository;
 
     public AccountService(AccountProperties accountProperties) {
         this.accountProperties = accountProperties;
-        this.accountMap = new HashMap<>();
     }
 
-    public Account createAccount(User user) {
+    public Account createAccount(String login) {
+        User user = userRepository.findByLogin(login)
+                .orElseThrow(() -> new UserNotFoundException("User with username = %s not found".formatted(login)));
+
         Account account = new Account(user.getId(), accountProperties.getDefaultAccountAmount());
-        accountMap.put(account.getId(), account);
+        accountRepository.save(account);
+        accountRedisRepository.save(account);
         return account;
     }
 
-    // Optional - обертка над каким-то обьектом, которая может
-    // Либо содержать обьект, либо его не содержать
-    // Удобный вариант вместо того, чтоб возвращать null из метода
-    public Optional<Account> findAccountById(int id) {
-        return accountRepository.findById(id);
+    @Cacheable(value = "accounts", key = "#id")
+    public Account findAccountById(int id) throws AccountNotFoundException {
+        return accountRedisRepository.findById(id)
+                .orElseGet(() -> {
+                    try {
+                        return accountRepository.findById(id)
+                                .orElseThrow(() -> new AccountNotFoundException("Account with id = %s not found".formatted(id)));
+                    } catch (AccountNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
     }
 
+    @Cacheable(value = "userAccounts", key = "#userId")
     public List<Account> getAllUserAccounts(int userId) {
-        return accountRepository.findByUserId(userId);
+        return accountRepository.findByUserId(userId)
+                .orElseThrow(() -> new UserNotFoundException("User with id = %s not found".formatted(userId)));
     }
 
-    public void depositAccount(int accountId, int moneyToDeposit) {
-        var account = findAccountById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("No such account: id=%s".formatted(accountId)));
+    public void depositAccount(int accountId, int moneyToDeposit) throws AccountNotFoundException {
+        var account = findAccountById(accountId);
         if(moneyToDeposit <= 0) {
-            throw new IllegalArgumentException("Cannot deposit not positive money: amount=%s".formatted(moneyToDeposit));
+            throw new IllegalArgumentException("Cannot deposit not positive money: amount = %s".formatted(moneyToDeposit));
         }
 
         account.setMoneyAmount(account.getMoneyAmount() + moneyToDeposit);
         accountRepository.save(account);
     }
 
-    public void withdrawFromAccount(int accountId, int amountToWithdraw) {
-        var account = findAccountById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("No such account: id=%s".formatted(accountId)));
+    public void withdrawFromAccount(int accountId, int amountToWithdraw) throws AccountNotFoundException {
+        var account = findAccountById(accountId);
 
         if(amountToWithdraw <= 0) {
-            throw new IllegalArgumentException("Cannot withdraw not positive money: amount=%s".formatted(amountToWithdraw));
+            throw new IllegalArgumentException("Cannot withdraw not positive money: amount = %s".formatted(amountToWithdraw));
         }
         if(account.getMoneyAmount() < amountToWithdraw) {
-            throw new IllegalArgumentException("Cannot withdraw from account: id=%s, moneyAmount=%s, attemptedWithdraw=%s"
+            throw new IllegalArgumentException("Cannot withdraw from account: id = %s, moneyAmount = %s, attemptedWithdraw=%s"
                     .formatted(accountId, account.getMoneyAmount(), amountToWithdraw));
         }
 
@@ -68,9 +82,8 @@ public class AccountService {
         accountRepository.save(account);
     }
 
-    public Account closeAccount(int accountId) {
-        var accountToRemove = findAccountById(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("No such account: id=%s".formatted(accountId)));
+    public void closeAccount(int accountId) throws AccountNotFoundException {
+        var accountToRemove = findAccountById(accountId);
 
         List<Account> accountList = getAllUserAccounts(accountToRemove.getUserId());
 
@@ -82,23 +95,19 @@ public class AccountService {
                 .findFirst()
                 .orElseThrow();
         accountToDeposit.setMoneyAmount(accountToDeposit.getMoneyAmount() + accountToRemove.getMoneyAmount());
-        accountMap.remove(accountId);
         accountRepository.delete(accountToRemove);
-        return accountToRemove;
     }
 
-    public void transfer(int fromAccountId, int toAccountId, int amountToTransfer) {
-        var accountFrom = findAccountById(fromAccountId)
-                .orElseThrow(() -> new IllegalArgumentException("No such account: id=%s".formatted(fromAccountId)));
-        var accountTo = findAccountById(toAccountId)
-                .orElseThrow(() -> new IllegalArgumentException("No such account: id=%s".formatted(toAccountId)));
+    public void transfer(int fromAccountId, int toAccountId, int amountToTransfer) throws AccountNotFoundException {
+        var accountFrom = findAccountById(fromAccountId);
+        var accountTo = findAccountById(toAccountId);
 
         if(amountToTransfer <= 0) {
-            throw new IllegalArgumentException("Cannot transfer not positive money: amount=%s"
+            throw new IllegalArgumentException("Cannot transfer not positive money: amount = %s"
                     .formatted(amountToTransfer));
         }
         if(accountFrom.getMoneyAmount() < amountToTransfer) {
-            throw new IllegalArgumentException("Cannot transfer from account: id=%s, moneyAmount=%s, attemptedTransfer=%s"
+            throw new IllegalArgumentException("Cannot transfer from account: id = %s, moneyAmount= %s, attemptedTransfer = %s"
                     .formatted(accountFrom, accountFrom.getMoneyAmount(), amountToTransfer));
         }
 
