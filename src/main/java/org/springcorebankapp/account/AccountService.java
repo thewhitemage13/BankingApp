@@ -1,10 +1,10 @@
 package org.springcorebankapp.account;
 
 import org.springcorebankapp.exception.UserNotFoundException;
-import org.springcorebankapp.redis.repository.AccountRedisRepository;
 import org.springcorebankapp.user.User;
 import org.springcorebankapp.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,57 +20,54 @@ public class AccountService {
     private final AccountProperties accountProperties;
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private AccountRedisRepository accountRedisRepository;
 
     public AccountService(AccountProperties accountProperties) {
         this.accountProperties = accountProperties;
     }
 
+    @CacheEvict(value = "accounts", key = "#login")
     public Account createAccount(String login) {
         User user = userRepository.findByLogin(login)
-                .orElseThrow(() -> new UserNotFoundException("User with username = %s not found".formatted(login)));
+                .orElseThrow(() ->
+                        new UserNotFoundException("User with username = %s not found".formatted(login)));
 
         Account account = new Account(user.getId(), accountProperties.getDefaultAccountAmount());
         accountRepository.save(account);
-        accountRedisRepository.save(account);
         return account;
     }
 
     @Cacheable(value = "accounts", key = "#id")
     public Account findAccountById(int id) throws AccountNotFoundException {
-        return accountRedisRepository.findById(id)
-                .orElseGet(() -> {
-                    try {
-                        return accountRepository.findById(id)
-                                .orElseThrow(() -> new AccountNotFoundException("Account with id = %s not found".formatted(id)));
-                    } catch (AccountNotFoundException e) {
-                        throw new RuntimeException(e);
-                    }
-                });
+        return accountRepository.findById(id)
+                .orElseThrow(() -> new AccountNotFoundException("Account with id = %s not found".formatted(id)));
     }
 
     @Cacheable(value = "userAccounts", key = "#userId")
     public List<Account> getAllUserAccounts(int userId) {
         return accountRepository.findByUserId(userId)
-                .orElseThrow(() -> new UserNotFoundException("User with id = %s not found".formatted(userId)));
+                .orElseThrow(() ->
+                        new UserNotFoundException("User with id = %s not found".formatted(userId)));
     }
 
+    @CacheEvict(value = "accounts", key = "#accountId")
     public void depositAccount(int accountId, int moneyToDeposit) throws AccountNotFoundException {
         var account = findAccountById(accountId);
         if(moneyToDeposit <= 0) {
-            throw new IllegalArgumentException("Cannot deposit not positive money: amount = %s".formatted(moneyToDeposit));
+            throw new IllegalArgumentException("Cannot deposit not positive money: amount = %s"
+                    .formatted(moneyToDeposit));
         }
 
         account.setMoneyAmount(account.getMoneyAmount() + moneyToDeposit);
         accountRepository.save(account);
     }
 
+    @CacheEvict(value = "accounts", key = "#accountId")
     public void withdrawFromAccount(int accountId, int amountToWithdraw) throws AccountNotFoundException {
         var account = findAccountById(accountId);
 
         if(amountToWithdraw <= 0) {
-            throw new IllegalArgumentException("Cannot withdraw not positive money: amount = %s".formatted(amountToWithdraw));
+            throw new IllegalArgumentException("Cannot withdraw not positive money: amount = %s"
+                    .formatted(amountToWithdraw));
         }
         if(account.getMoneyAmount() < amountToWithdraw) {
             throw new IllegalArgumentException("Cannot withdraw from account: id = %s, moneyAmount = %s, attemptedWithdraw=%s"
@@ -82,6 +79,7 @@ public class AccountService {
         accountRepository.save(account);
     }
 
+    @CacheEvict(value = {"accounts", "userAccounts"}, allEntries = true)
     public void closeAccount(int accountId) throws AccountNotFoundException {
         var accountToRemove = findAccountById(accountId);
 
@@ -98,6 +96,7 @@ public class AccountService {
         accountRepository.delete(accountToRemove);
     }
 
+    @CacheEvict(value = "accounts", allEntries = true)
     public void transfer(int fromAccountId, int toAccountId, int amountToTransfer) throws AccountNotFoundException {
         var accountFrom = findAccountById(fromAccountId);
         var accountTo = findAccountById(toAccountId);

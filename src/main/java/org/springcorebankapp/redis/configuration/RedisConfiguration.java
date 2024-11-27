@@ -6,17 +6,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+import java.time.Duration;
 
 @Configuration
-@EnableRedisRepositories(
-        basePackages = "org.springcorebankapp.redis.repository",
-        repositoryImplementationPostfix = "RedisRepository"
-)
 public class RedisConfiguration {
 
     @Bean
@@ -25,6 +21,7 @@ public class RedisConfiguration {
     ) {
         RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration
                 .defaultCacheConfig()
+                .entryTtl(Duration.ofSeconds(10))
                 .serializeKeysWith(RedisSerializationContext
                         .SerializationPair
                         .fromSerializer(new StringRedisSerializer()))
@@ -34,6 +31,8 @@ public class RedisConfiguration {
                                 .fromSerializer(new GenericJackson2JsonRedisSerializer())
                 );
 
-        return RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(redisCacheConfiguration).build();
+        return RedisCacheManager.builder(redisConnectionFactory)
+                .cacheDefaults(redisCacheConfiguration)
+                .build();
     }
 }

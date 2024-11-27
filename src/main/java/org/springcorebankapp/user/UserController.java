@@ -23,7 +23,7 @@ public class UserController {
     public ResponseEntity<String> createUser(@RequestParam("login") String login) {
         try {
             userService.createUser(login);
-            return ResponseEntity.ok("User with login = %s crated".formatted(login));
+            return ResponseEntity.ok("User with login = %s created".formatted(login));
         } catch (LoginIsBusyException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User with login = %s already exist".formatted(login));
         } catch (Exception e) {

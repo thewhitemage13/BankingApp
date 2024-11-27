@@ -15,15 +15,15 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
-@RedisHash("User")
+//@RedisHash("User")
 @Table(name = "users")
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "login", nullable = false, unique = true)
+    @Column(name = "login", nullable = false)
     private String login;
-    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Account> accountList;
 
     public User(String login, List<Account> accountList) {
