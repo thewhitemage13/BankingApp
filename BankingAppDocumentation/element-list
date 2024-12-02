@@ -1,0 +1,7 @@
+org.springcorebankapp
+org.springcorebankapp.account
+org.springcorebankapp.configurations.openapi
+org.springcorebankapp.configurations.redis
+org.springcorebankapp.exception
+org.springcorebankapp.logging
+org.springcorebankapp.user
