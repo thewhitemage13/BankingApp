@@ -1,309 +1,214 @@
-2024-11-28T11:09:02.149+01:00  INFO 5568 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 5568 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:09:02.156+01:00  INFO 5568 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:09:02.716+01:00  WARN 5568 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2024-11-28T11:09:02.723+01:00  INFO 5568 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-11-28T11:09:02.738+01:00 ERROR 5568 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springcorebankapp.App.main(App.java:11) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.10.jar:6.1.10]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017) ~[na:na]
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.10.jar:6.1.10]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
-	... 46 common frames omitted
-
-2024-11-28T11:09:35.826+01:00  INFO 25408 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 25408 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:09:35.828+01:00  INFO 25408 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:09:36.257+01:00  WARN 25408 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-2024-11-28T11:09:36.263+01:00  INFO 25408 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-11-28T11:09:36.275+01:00 ERROR 25408 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-java.lang.IllegalStateException: Error processing condition on org.springdoc.webmvc.ui.SwaggerConfig.springWebProvider
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:429) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.10.jar:6.1.10]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.1.jar:3.3.1]
-	at org.springcorebankapp.App.main(App.java:11) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springdoc.webmvc.ui.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417) ~[spring-core-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750) ~[spring-beans-6.1.10.jar:6.1.10]
-	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1687) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.10.jar:6.1.10]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.1.jar:3.3.1]
-	... 17 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/springframework/web/servlet/resource/LiteWebJarsResourceResolver
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017) ~[na:na]
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
-	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
-	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.10.jar:6.1.10]
-	... 33 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.springframework.web.servlet.resource.LiteWebJarsResourceResolver
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
-	... 46 common frames omitted
-
-2024-11-28T11:13:58.434+01:00  INFO 12244 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 12244 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:13:58.436+01:00  INFO 12244 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:13:58.903+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:13:58.904+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-28T11:13:59.029+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 2 JPA repository interfaces.
-2024-11-28T11:13:59.044+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:13:59.046+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-11-28T11:13:59.058+01:00  INFO 12244 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:13:59.059+01:00  INFO 12244 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:13:59.059+01:00  INFO 12244 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2024-11-28T11:13:59.687+01:00  INFO 12244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
-2024-11-28T11:13:59.697+01:00  INFO 12244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-28T11:13:59.697+01:00  INFO 12244 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-28T11:13:59.747+01:00  INFO 12244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-28T11:13:59.747+01:00  INFO 12244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
-2024-11-28T11:13:59.906+01:00  INFO 12244 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-28T11:13:59.967+01:00  INFO 12244 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-28T11:14:00.002+01:00  INFO 12244 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-28T11:14:00.210+01:00  INFO 12244 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-28T11:14:00.234+01:00  INFO 12244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-28T11:14:00.377+01:00  INFO 12244 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a11ae0b
-2024-11-28T11:14:00.378+01:00  INFO 12244 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-28T11:14:00.441+01:00  WARN 12244 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-28T11:14:01.063+01:00  INFO 12244 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-28T11:14:01.135+01:00  INFO 12244 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:14:01.862+01:00  WARN 12244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-28T11:14:02.651+01:00  INFO 12244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
-2024-11-28T11:14:02.657+01:00  INFO 12244 --- [main] org.springcorebankapp.App                : Started App in 4.488 seconds (process running for 4.921)
-2024-11-28T11:15:00.720+01:00  INFO 12244 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-28T11:15:00.721+01:00  INFO 12244 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-28T11:15:00.722+01:00  INFO 12244 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-28T11:15:13.058+01:00  INFO 12244 --- [http-nio-7070-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 145 ms
-2024-11-28T11:16:47.620+01:00  INFO 12244 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:16:47.622+01:00  INFO 12244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-28T11:16:47.624+01:00  INFO 12244 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-28T11:18:41.617+01:00  INFO 21300 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 21300 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:18:41.619+01:00  INFO 21300 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:18:42.088+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:18:42.089+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-28T11:18:42.180+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
-2024-11-28T11:18:42.191+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:18:42.192+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-11-28T11:18:42.201+01:00  INFO 21300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:18:42.201+01:00  INFO 21300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:18:42.201+01:00  INFO 21300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-11-28T11:18:42.699+01:00  INFO 21300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
-2024-11-28T11:18:42.706+01:00  INFO 21300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-28T11:18:42.707+01:00  INFO 21300 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-28T11:18:42.749+01:00  INFO 21300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-28T11:18:42.749+01:00  INFO 21300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1102 ms
-2024-11-28T11:18:42.888+01:00  INFO 21300 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-28T11:18:42.926+01:00  INFO 21300 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-28T11:18:42.948+01:00  INFO 21300 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-28T11:18:43.126+01:00  INFO 21300 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-28T11:18:43.143+01:00  INFO 21300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-28T11:18:43.249+01:00  INFO 21300 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@79617c3d
-2024-11-28T11:18:43.250+01:00  INFO 21300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-28T11:18:43.276+01:00  WARN 21300 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-28T11:18:43.929+01:00  INFO 21300 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-28T11:18:43.963+01:00  INFO 21300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:18:44.699+01:00  WARN 21300 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-28T11:18:45.485+01:00  INFO 21300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
-2024-11-28T11:18:45.492+01:00  INFO 21300 --- [main] org.springcorebankapp.App                : Started App in 4.15 seconds (process running for 4.502)
-2024-11-28T11:18:48.789+01:00  INFO 21300 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-28T11:18:48.789+01:00  INFO 21300 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-28T11:18:48.790+01:00  INFO 21300 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-28T11:18:49.125+01:00  INFO 21300 --- [http-nio-7070-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 175 ms
-2024-11-28T11:19:03.582+01:00  INFO 21300 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:19:03.584+01:00  INFO 21300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-28T11:19:03.586+01:00  INFO 21300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-28T11:27:57.320+01:00  INFO 4268 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 4268 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:27:57.321+01:00  INFO 4268 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:27:57.801+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:27:57.803+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-28T11:27:57.910+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
-2024-11-28T11:27:57.928+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:27:57.929+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-11-28T11:27:57.948+01:00  INFO 4268 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:27:57.948+01:00  INFO 4268 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:27:57.948+01:00  INFO 4268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2024-11-28T11:27:58.506+01:00  INFO 4268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
-2024-11-28T11:27:58.515+01:00  INFO 4268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-28T11:27:58.516+01:00  INFO 4268 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-28T11:27:58.571+01:00  INFO 4268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-28T11:27:58.573+01:00  INFO 4268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1223 ms
-2024-11-28T11:27:58.773+01:00  INFO 4268 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-28T11:27:58.834+01:00  INFO 4268 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-28T11:27:58.868+01:00  INFO 4268 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-28T11:27:59.155+01:00  INFO 4268 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-28T11:27:59.188+01:00  INFO 4268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-28T11:27:59.328+01:00  INFO 4268 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15a484a9
-2024-11-28T11:27:59.330+01:00  INFO 4268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-28T11:27:59.360+01:00  WARN 4268 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-28T11:28:00.143+01:00  INFO 4268 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-28T11:28:00.193+01:00  INFO 4268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:28:01.112+01:00  WARN 4268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-28T11:28:01.913+01:00  INFO 4268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
-2024-11-28T11:28:01.920+01:00  INFO 4268 --- [main] org.springcorebankapp.App                : Started App in 4.877 seconds (process running for 5.232)
-2024-11-28T11:28:02.705+01:00  INFO 4268 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-28T11:28:02.705+01:00  INFO 4268 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-28T11:28:02.707+01:00  INFO 4268 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-11-28T11:28:03.051+01:00  INFO 4268 --- [http-nio-7070-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 189 ms
-2024-11-28T11:28:46.168+01:00  INFO 4268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:28:46.170+01:00  INFO 4268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-28T11:28:46.171+01:00  INFO 4268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-28T11:33:04.166+01:00  INFO 10816 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 10816 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:33:04.168+01:00  INFO 10816 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:33:04.652+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:33:04.653+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-28T11:33:04.744+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
-2024-11-28T11:33:04.753+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:33:04.754+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-11-28T11:33:04.763+01:00  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:33:04.763+01:00  INFO 10816 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:33:04.763+01:00  INFO 10816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-11-28T11:33:05.251+01:00  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
-2024-11-28T11:33:05.260+01:00  INFO 10816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-28T11:33:05.260+01:00  INFO 10816 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-28T11:33:05.301+01:00  INFO 10816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-28T11:33:05.301+01:00  INFO 10816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1102 ms
-2024-11-28T11:33:05.456+01:00  INFO 10816 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-28T11:33:05.495+01:00  INFO 10816 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-28T11:33:05.515+01:00  INFO 10816 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-28T11:33:05.696+01:00  INFO 10816 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-28T11:33:05.712+01:00  INFO 10816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-28T11:33:05.818+01:00  INFO 10816 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41bd6a0f
-2024-11-28T11:33:05.819+01:00  INFO 10816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-28T11:33:05.843+01:00  WARN 10816 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-28T11:33:06.471+01:00  INFO 10816 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-28T11:33:06.501+01:00  INFO 10816 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:33:07.338+01:00  WARN 10816 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-28T11:33:08.215+01:00  INFO 10816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
-2024-11-28T11:33:08.222+01:00  INFO 10816 --- [main] org.springcorebankapp.App                : Started App in 4.345 seconds (process running for 4.721)
-2024-11-28T11:33:09.902+01:00  INFO 10816 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-28T11:33:09.902+01:00  INFO 10816 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-28T11:33:09.903+01:00  INFO 10816 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-28T11:33:10.263+01:00  INFO 10816 --- [http-nio-7070-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 192 ms
-2024-11-28T11:34:00.554+01:00  INFO 10816 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:34:00.556+01:00  INFO 10816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-28T11:34:00.558+01:00  INFO 10816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-28T11:36:36.578+01:00  INFO 18784 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 18784 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
-2024-11-28T11:36:36.579+01:00  INFO 18784 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
-2024-11-28T11:36:37.051+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:36:37.053+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-28T11:36:37.140+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
-2024-11-28T11:36:37.155+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-11-28T11:36:37.156+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-11-28T11:36:37.165+01:00  INFO 18784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:36:37.165+01:00  INFO 18784 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-11-28T11:36:37.165+01:00  INFO 18784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2024-11-28T11:36:37.639+01:00  INFO 18784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
-2024-11-28T11:36:37.646+01:00  INFO 18784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-28T11:36:37.646+01:00  INFO 18784 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-28T11:36:37.685+01:00  INFO 18784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-28T11:36:37.685+01:00  INFO 18784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1074 ms
-2024-11-28T11:36:37.811+01:00  INFO 18784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-28T11:36:37.851+01:00  INFO 18784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-28T11:36:37.871+01:00  INFO 18784 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-28T11:36:38.048+01:00  INFO 18784 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-28T11:36:38.065+01:00  INFO 18784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-28T11:36:38.170+01:00  INFO 18784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ae9d0e4
-2024-11-28T11:36:38.171+01:00  INFO 18784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-28T11:36:38.194+01:00  WARN 18784 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-28T11:36:38.728+01:00  INFO 18784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-28T11:36:38.755+01:00  INFO 18784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:36:39.399+01:00  WARN 18784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-28T11:36:40.127+01:00  INFO 18784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
-2024-11-28T11:36:40.135+01:00  INFO 18784 --- [main] org.springcorebankapp.App                : Started App in 3.851 seconds (process running for 4.21)
-2024-11-28T11:36:43.216+01:00  INFO 18784 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-28T11:36:43.216+01:00  INFO 18784 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-28T11:36:43.217+01:00  INFO 18784 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-28T11:36:43.552+01:00  INFO 18784 --- [http-nio-7070-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 196 ms
-2024-11-28T11:36:57.544+01:00  INFO 18784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-28T11:36:57.545+01:00  INFO 18784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-28T11:36:57.547+01:00  INFO 18784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T10:35:53.198+01:00  INFO 28136 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 28136 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-12-05T10:35:53.203+01:00 DEBUG 28136 --- [main] org.springcorebankapp.App                : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-12-05T10:35:53.204+01:00  INFO 28136 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T10:35:53.731+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-05T10:35:53.732+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T10:35:53.834+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+2024-12-05T10:35:53.845+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-05T10:35:53.846+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-05T10:35:53.857+01:00  INFO 28136 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.account.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-12-05T10:35:53.857+01:00  INFO 28136 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.springcorebankapp.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-12-05T10:35:53.857+01:00  INFO 28136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2024-12-05T10:35:54.433+01:00  INFO 28136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-12-05T10:35:54.440+01:00  INFO 28136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T10:35:54.442+01:00  INFO 28136 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-05T10:35:54.488+01:00  INFO 28136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T10:35:54.489+01:00  INFO 28136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1253 ms
+2024-12-05T10:35:54.646+01:00  INFO 28136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T10:35:54.688+01:00  INFO 28136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-05T10:35:54.713+01:00  INFO 28136 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T10:35:54.939+01:00  INFO 28136 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T10:35:54.966+01:00  INFO 28136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T10:35:55.271+01:00  INFO 28136 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4df7b4ac
+2024-12-05T10:35:55.272+01:00  INFO 28136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T10:35:55.412+01:00  WARN 28136 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-05T10:35:56.103+01:00  INFO 28136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T10:35:56.293+01:00  INFO 28136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T10:35:57.045+01:00  WARN 28136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T10:35:57.927+01:00  INFO 28136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-12-05T10:35:57.934+01:00  INFO 28136 --- [main] org.springcorebankapp.App                : Started App in 5.126 seconds (process running for 5.792)
+2024-12-05T10:36:22.917+01:00  INFO 28136 --- [http-nio-7070-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T10:36:22.917+01:00  INFO 28136 --- [http-nio-7070-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T10:36:22.919+01:00  INFO 28136 --- [http-nio-7070-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-05T10:36:42.920+01:00 DEBUG 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:42.924+01:00 DEBUG 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:42.929+01:00 DEBUG 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:42.985+01:00  INFO 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:42.997+01:00  INFO 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:43.012+01:00  INFO 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:36:43.910+01:00 DEBUG 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:43.912+01:00 DEBUG 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:43.912+01:00 DEBUG 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:43.913+01:00  INFO 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:43.914+01:00  INFO 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:43.915+01:00  INFO 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:36:44.519+01:00 DEBUG 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:44.520+01:00 DEBUG 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:44.520+01:00 DEBUG 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:44.521+01:00  INFO 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:44.522+01:00  INFO 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:44.523+01:00  INFO 28136 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:36:51.786+01:00 DEBUG 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:51.787+01:00 DEBUG 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:51.787+01:00 DEBUG 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:51.790+01:00  INFO 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:51.790+01:00  INFO 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:51.791+01:00  INFO 28136 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:36:52.342+01:00 DEBUG 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:52.343+01:00 DEBUG 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:52.343+01:00 DEBUG 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:52.345+01:00  INFO 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:52.346+01:00  INFO 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:52.346+01:00  INFO 28136 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:36:52.855+01:00 DEBUG 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T10:36:52.856+01:00 DEBUG 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T10:36:52.856+01:00 DEBUG 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:36:52.859+01:00  INFO 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T10:36:52.860+01:00  INFO 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T10:36:52.860+01:00  INFO 28136 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T10:37:42.719+01:00 DEBUG 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:43.048+01:00 DEBUG 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: AccountService.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:43.050+01:00 DEBUG 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T10:37:43.052+01:00  INFO 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=1, userId=1, moneyAmount=500}]
+2024-12-05T10:37:43.053+01:00  INFO 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=1, userId=1, moneyAmount=500}
+2024-12-05T10:37:43.064+01:00  INFO 28136 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:44.080+01:00 DEBUG 28136 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:44.110+01:00  INFO 28136 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:44.664+01:00 DEBUG 28136 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:44.666+01:00  INFO 28136 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:45.239+01:00 DEBUG 28136 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:45.241+01:00  INFO 28136 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:45.722+01:00 DEBUG 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:45.725+01:00  INFO 28136 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:46.250+01:00 DEBUG 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T10:37:46.254+01:00  INFO 28136 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T10:37:56.607+01:00  INFO 28136 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T10:37:56.610+01:00  INFO 28136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T10:37:56.612+01:00  INFO 28136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T11:05:44.855+01:00  INFO 28436 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 28436 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-12-05T11:05:44.859+01:00 DEBUG 28436 --- [main] org.springcorebankapp.App                : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-12-05T11:05:44.859+01:00  INFO 28436 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T11:05:45.228+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-05T11:05:45.229+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-12-05T11:05:45.242+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2024-12-05T11:05:45.392+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-05T11:05:45.393+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T11:05:45.489+01:00  INFO 28436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2024-12-05T11:05:46.049+01:00  INFO 28436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-12-05T11:05:46.057+01:00  INFO 28436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T11:05:46.057+01:00  INFO 28436 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-05T11:05:46.101+01:00  INFO 28436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T11:05:46.102+01:00  INFO 28436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
+2024-12-05T11:05:46.260+01:00  INFO 28436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T11:05:46.309+01:00  INFO 28436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-05T11:05:46.330+01:00  INFO 28436 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T11:05:46.525+01:00  INFO 28436 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T11:05:46.547+01:00  INFO 28436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T11:05:46.823+01:00  INFO 28436 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b4619a3
+2024-12-05T11:05:46.824+01:00  INFO 28436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T11:05:46.943+01:00  WARN 28436 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-05T11:05:47.568+01:00  INFO 28436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T11:05:47.647+01:00  INFO 28436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T11:05:48.496+01:00  WARN 28436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T11:05:49.212+01:00  INFO 28436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-12-05T11:05:49.220+01:00  INFO 28436 --- [main] org.springcorebankapp.App                : Started App in 4.651 seconds (process running for 5.365)
+2024-12-05T11:05:53.903+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T11:05:53.903+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T11:05:53.905+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-05T11:05:53.936+01:00 DEBUG 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:05:54.258+01:00 DEBUG 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : Method call: AccountService.findAccountById(..) with arguments: [1]
+2024-12-05T11:05:54.262+01:00 DEBUG 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:05:54.318+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=1, userId=1, moneyAmount=500}]
+2024-12-05T11:05:54.320+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=1, userId=1, moneyAmount=500}
+2024-12-05T11:05:54.375+01:00  INFO 28436 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:05:55.255+01:00 DEBUG 28436 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:05:55.288+01:00  INFO 28436 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:05:55.972+01:00 DEBUG 28436 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:05:55.974+01:00  INFO 28436 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:06:02.991+01:00 DEBUG 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T11:06:02.992+01:00 DEBUG 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T11:06:02.996+01:00 DEBUG 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:06:03.005+01:00  INFO 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T11:06:03.013+01:00  INFO 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T11:06:03.018+01:00  INFO 28436 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T11:06:03.683+01:00 DEBUG 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T11:06:03.684+01:00 DEBUG 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T11:06:03.684+01:00 DEBUG 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:06:03.685+01:00  INFO 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T11:06:03.686+01:00  INFO 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T11:06:03.687+01:00  INFO 28436 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T11:06:04.410+01:00 DEBUG 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T11:06:04.411+01:00 DEBUG 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T11:06:04.412+01:00 DEBUG 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:06:04.413+01:00  INFO 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T11:06:04.413+01:00  INFO 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T11:06:04.414+01:00  INFO 28436 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T11:06:11.028+01:00 DEBUG 28436 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:06:11.031+01:00  INFO 28436 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:06:11.742+01:00 DEBUG 28436 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:06:11.745+01:00  INFO 28436 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:06:17.666+01:00 DEBUG 28436 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:06:17.668+01:00  INFO 28436 --- [http-nio-7070-exec-10] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:06:18.583+01:00 DEBUG 28436 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:06:18.585+01:00  INFO 28436 --- [http-nio-7070-exec-2] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:06:30.635+01:00  INFO 28436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T11:06:30.637+01:00  INFO 28436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T11:06:30.639+01:00  INFO 28436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-05T11:07:41.103+01:00  INFO 28996 --- [main] org.springcorebankapp.App                : Starting App using Java 17.0.12 with PID 28996 (C:\JavaMain\MAIN PROJECT\spring-core-bank-app\target\classes started by lolim in C:\JavaMain\MAIN PROJECT\spring-core-bank-app)
+2024-12-05T11:07:41.105+01:00 DEBUG 28996 --- [main] org.springcorebankapp.App                : Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-12-05T11:07:41.105+01:00  INFO 28996 --- [main] org.springcorebankapp.App                : No active profile set, falling back to 1 default profile: "default"
+2024-12-05T11:07:41.618+01:00  INFO 28996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-05T11:07:41.619+01:00  INFO 28996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05T11:07:41.712+01:00  INFO 28996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+2024-12-05T11:07:42.223+01:00  INFO 28996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7070 (http)
+2024-12-05T11:07:42.232+01:00  INFO 28996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-05T11:07:42.232+01:00  INFO 28996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-05T11:07:42.275+01:00  INFO 28996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-05T11:07:42.276+01:00  INFO 28996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1139 ms
+2024-12-05T11:07:42.422+01:00  INFO 28996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-05T11:07:42.457+01:00  INFO 28996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-05T11:07:42.489+01:00  INFO 28996 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-05T11:07:42.682+01:00  INFO 28996 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05T11:07:42.711+01:00  INFO 28996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-05T11:07:42.826+01:00  INFO 28996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65262308
+2024-12-05T11:07:42.828+01:00  INFO 28996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-05T11:07:42.852+01:00  WARN 28996 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-05T11:07:43.426+01:00  INFO 28996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-05T11:07:43.455+01:00  INFO 28996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T11:07:44.170+01:00  WARN 28996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-05T11:07:44.966+01:00  INFO 28996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7070 (http) with context path '/'
+2024-12-05T11:07:44.973+01:00  INFO 28996 --- [main] org.springcorebankapp.App                : Started App in 4.182 seconds (process running for 4.584)
+2024-12-05T11:07:47.157+01:00  INFO 28996 --- [http-nio-7070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05T11:07:47.157+01:00  INFO 28996 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-05T11:07:47.159+01:00  INFO 28996 --- [http-nio-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-05T11:07:47.188+01:00 DEBUG 28996 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:07:47.503+01:00  INFO 28996 --- [http-nio-7070-exec-1] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:07:48.469+01:00 DEBUG 28996 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:07:48.470+01:00  INFO 28996 --- [http-nio-7070-exec-3] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:07:50.596+01:00 DEBUG 28996 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [1]
+2024-12-05T11:07:50.598+01:00  INFO 28996 --- [http-nio-7070-exec-4] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=1, userId=1, moneyAmount=500},[]>
+2024-12-05T11:07:52.196+01:00 DEBUG 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [2]
+2024-12-05T11:07:52.201+01:00 DEBUG 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: AccountService.findAccountById(..) with arguments: [2]
+2024-12-05T11:07:52.205+01:00 DEBUG 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [2]
+2024-12-05T11:07:52.240+01:00  INFO 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[Account{id=2, userId=2, moneyAmount=500}]
+2024-12-05T11:07:52.241+01:00  INFO 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The AccountService.findAccountById(..) method executed successfully. Result: Account{id=2, userId=2, moneyAmount=500}
+2024-12-05T11:07:52.258+01:00  INFO 28996 --- [http-nio-7070-exec-5] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=2, moneyAmount=500},[]>
+2024-12-05T11:07:53.176+01:00 DEBUG 28996 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [2]
+2024-12-05T11:07:53.177+01:00  INFO 28996 --- [http-nio-7070-exec-6] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=2, moneyAmount=500},[]>
+2024-12-05T11:07:53.895+01:00 DEBUG 28996 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : Method call: AccountController.findAccountById(..) with arguments: [2]
+2024-12-05T11:07:53.897+01:00  INFO 28996 --- [http-nio-7070-exec-7] o.s.logging.AspectService                : The AccountController.findAccountById(..) method executed successfully. Result: <200 OK OK,Account{id=2, userId=2, moneyAmount=500},[]>
+2024-12-05T11:07:56.286+01:00 DEBUG 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T11:07:56.286+01:00 DEBUG 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T11:07:56.288+01:00 DEBUG 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:07:56.295+01:00  INFO 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T11:07:56.302+01:00  INFO 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T11:07:56.307+01:00  INFO 28996 --- [http-nio-7070-exec-8] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T11:07:57.092+01:00 DEBUG 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: UserController.findUserById(..) with arguments: [1]
+2024-12-05T11:07:57.093+01:00 DEBUG 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: UserService.findUserById(..) with arguments: [1]
+2024-12-05T11:07:57.093+01:00 DEBUG 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : Method call: CrudRepository.findById(..) with arguments: [1]
+2024-12-05T11:07:57.094+01:00  INFO 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The CrudRepository.findById(..) method executed successfully. Result: Optional[User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}]
+2024-12-05T11:07:57.095+01:00  INFO 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The UserService.findUserById(..) method executed successfully. Result: User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]}
+2024-12-05T11:07:57.096+01:00  INFO 28996 --- [http-nio-7070-exec-9] o.s.logging.AspectService                : The UserController.findUserById(..) method executed successfully. Result: <200 OK OK,User{id=1, login='login1', accountList=[Account{id=1, userId=1, moneyAmount=500}]},[]>
+2024-12-05T11:08:00.974+01:00  INFO 28996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05T11:08:00.976+01:00  INFO 28996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-05T11:08:00.978+01:00  INFO 28996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

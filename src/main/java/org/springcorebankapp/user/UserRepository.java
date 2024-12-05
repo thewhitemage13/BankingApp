@@ -1,6 +1,7 @@
 package org.springcorebankapp.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -15,7 +16,7 @@ import java.util.Optional;
  * @author Mukhammed Lolo
  * @version 1.0.0
  */
-@Repository("userRepository")
+@Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     /**

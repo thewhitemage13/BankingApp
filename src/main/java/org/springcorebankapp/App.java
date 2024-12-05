@@ -3,6 +3,7 @@ package org.springcorebankapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * The main class of the application, which serves as the entry point for the Spring Boot application.
