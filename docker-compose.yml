@@ -1,0 +1,48 @@
+version: "3.9"
+
+volumes:
+  pg_demo:
+  redis_volume_data:
+  redis_insight_volume_data:
+
+services:
+  banking_app_db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=banking_app_db
+    volumes:
+      - pg_demo:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  app:
+    restart: always
+    build: .
+    ports:
+      - "7070:7070"
+    depends_on:
+      - banking_app_db
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://banking_app_db:5432/banking_app_db"
+      JAVA_OPTS: "-Xmx512m"
+
+  redis:
+    image: redis:6.0.7
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_volume_data:/data
+    ports:
+      - "6379:6379"
+
+  redis_insight:
+    image: redislabs/redisinsight:1.14.0
+    container_name: redis_insight
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - redis_insight_volume_data:/db
