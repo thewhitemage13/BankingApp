@@ -1,57 +1,96 @@
+# Web Banking App 🏦
 
-# Web Banking App
+## Overview
+Web Banking App is a web application designed to manage users and their bank accounts with functionalities for transactions and account management. Developed with a focus on OOP, S.O.L.I.D. principles, and design patterns, it ensures a structured and scalable architecture.
 
-**Description:** Develop a console application that allows users to manage a collection of songs, albums and artists. 
-The application includes classes for representing songs, albums, artists and genres, and interfaces for playing and managing the collection. A user can add, delete, and play songs, as well as view information about songs, albums, and artists.
+## Features
+- **User Management:**
+  - [Create User](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
+  - [View User by ID](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
+  - [View All Users](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
 
-## Functionality
+- **Account Management:**
+  - [Open Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Delete Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Credit Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Debit Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Transfer Money Between Accounts](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
 
-The project includes abilities such as:
-
-- **[User Creation](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
-- **[View user by id](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
-- **[View all users](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)**
-- **[Account opening](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
-- **[Account deletion](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
-- **[Account crediting](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
-- **[Account debit](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
-- **[Transferring money between accounts](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)**
-
-## Rules of Use
-
-- The user must have a unique login
-- You cannot open an account for a non-existing user
-- You cannot debit more money from the account than there is in the account
-- If a user has one account, you cannot close it
+## Rules and Constraints
+- Each user must have a unique login.
+- Accounts can only be opened for existing users.
+- Account balance cannot be negative.
+- Users with a single account cannot close it.
 
 ## Architecture
+The application follows a structured and scalable architecture, developed using:
+- **Object-Oriented Programming (OOP)**
+- **S.O.L.I.D. Principles**
+- **Design Patterns**
 
-The project was developed using OOP and S.O.L.I.D. principles, resulting in a structured and scalable architecture. Care was taken to optimize collection handling and database performance.
+Database performance was optimized, and caching mechanisms were implemented to enhance application efficiency.
 
 ## Technologies
-
-The project utilizes the following technologies and tools:
-
-- **Java**.
-- **Spring Framework**:
+The project leverages modern tools and technologies:
+- **Java**: Core programming language.
+- **Spring Framework**: A robust ecosystem including:
   - Spring Boot
   - Spring Data JPA
   - Spring Web
-- **Docker** - application containerization.
-- **PostgreSQL** - relational database.
-- **Maven** - dependency management and project assembly.
-- **Design Patterns** - using design patterns to improve architecture.
-- **S.O.L.I.D.** - applying SOLID principles to create flexible and extensible code.
+  - Spring AOP
+- **Docker**: Application containerization.
+- **PostgreSQL**: Relational database.
+- **Redis**: In-memory data structure store for caching.
+- **Maven**: Dependency management and build automation.
+- **Swagger**: API documentation.
+- **JUnit 5 & Mockito**: Testing frameworks.
 
-### Installation and Startup
+## Installation and Startup
 
-- Installed Docker.
-- Installed JDK (Java Development Kit).
-- Installed Maven.
+1. **Prerequisites:**
+   - Install [Docker](https://www.docker.com/).
+   - Install [JDK](https://www.oracle.com/java/technologies/javase-downloads.html).
+   - Install [Maven](https://maven.apache.org/download.cgi).
+
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/thewhitemage13/BankingApp.git
+   cd BankingApp
+   ```
+
+3. **Set Up Environment:**
+   - Configure database connection in the `application.properties` file.
+
+4. **Start the Application:**
+   - Build the project:
+     ```bash
+     mvn clean install
+     ```
+   - Run using Docker:
+     ```bash
+     docker-compose up
+     ```
+
+5. **Access the Application:**
+   - API Documentation available at: `http://localhost:8080/swagger-ui.html`
 
 ## Achievements
+- **Optimized Architecture:**
+  Structured, maintainable, and scalable design.
+- **Enhanced Performance:**
+  Improved database interactions and implemented Redis caching.
+- **Comprehensive Testing:**
+  Extensive unit and integration tests using JUnit 5 and Mockito.
+- **Advanced Framework Usage:**
+  Gained in-depth experience with the Spring Framework ecosystem.
 
-- Effective implementation of OOP and S.O.L.I.D. principles.
-- Creating a structured and scalable architecture.
-- Optimization of database performance.
-- Improved skills in working with Spring framework.
+## Future Improvements
+- Add a graphical user interface (GUI) for enhanced usability.
+- Implement advanced reporting and analytics.
+- Integrate multi-factor authentication for improved security.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+Made with ❤️ by [Your Name](https://github.com/yourusername).
