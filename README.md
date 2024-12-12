@@ -72,7 +72,7 @@ The project leverages modern tools and technologies:
      ```
 
 5. **Access the Application:**
-   - API Documentation available at: `http://localhost:8080/swagger-ui.html`
+   - API Documentation available at: `http://localhost:7070/swagger-ui.html`
 
 ## Achievements
 - **Optimized Architecture:**
