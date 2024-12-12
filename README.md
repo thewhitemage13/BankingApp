@@ -3,26 +3,27 @@
 ## Overview
 Web Banking App is a web application designed to manage users and their bank accounts with functionalities for transactions and account management. Developed with a focus on OOP, S.O.L.I.D. principles, and design patterns, it ensures a structured and scalable architecture.
 
-## Features
-- **User Management:**
-  - [Create User](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
-  - [View User by ID](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
-  - [View All Users](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/user/UserService.java)
+## Features ⚡
 
-- **Account Management:**
-  - [Open Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
-  - [Delete Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
-  - [Credit Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
-  - [Debit Account](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
-  - [Transfer Money Between Accounts](https://github.com/thewhitemage13/BankingApp/blob/main/spring-core-bank-app/src/main/java/org/springcorebankapp/account/AccountService.java)
+- **User Management:** 👤
+  - [Create User](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/user/UserService.java)
+  - [View User by ID](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/user/UserService.java)
+  - [View All Users](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/user/UserService.java)
 
-## Rules and Constraints
+- **Account Management:** 💳
+  - [Open Account](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Delete Account](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Credit Account](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Debit Account](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/account/AccountService.java)
+  - [Transfer Money Between Accounts](https://github.com/thewhitemage13/BankingApp/blob/main/src/main/java/org/springcorebankapp/account/AccountService.java)
+
+## Rules and Constraints 📃
 - Each user must have a unique login.
 - Accounts can only be opened for existing users.
 - Account balance cannot be negative.
 - Users with a single account cannot close it.
 
-## Architecture
+## Architecture 🏡
 The application follows a structured and scalable architecture, developed using:
 - **Object-Oriented Programming (OOP)**
 - **S.O.L.I.D. Principles**
@@ -30,7 +31,7 @@ The application follows a structured and scalable architecture, developed using:
 
 Database performance was optimized, and caching mechanisms were implemented to enhance application efficiency.
 
-## Technologies
+## Technologies ⚙️
 The project leverages modern tools and technologies:
 - **Java**: Core programming language.
 - **Spring Framework**: A robust ecosystem including:
@@ -45,7 +46,7 @@ The project leverages modern tools and technologies:
 - **Swagger**: API documentation.
 - **JUnit 5 & Mockito**: Testing frameworks.
 
-## Installation and Startup
+## Installation and Startup 🛠
 
 1. **Prerequisites:**
    - Install [Docker](https://www.docker.com/).
@@ -71,10 +72,10 @@ The project leverages modern tools and technologies:
      docker-compose up
      ```
 
-5. **Access the Application:**
+5. **Access the Application:** 📄
    - API Documentation available at: `http://localhost:7070/swagger-ui.html`
 
-## Achievements
+## Achievements 🔥
 - **Optimized Architecture:**
   Structured, maintainable, and scalable design.
 - **Enhanced Performance:**
@@ -84,13 +85,13 @@ The project leverages modern tools and technologies:
 - **Advanced Framework Usage:**
   Gained in-depth experience with the Spring Framework ecosystem.
 
-## Future Improvements
+## Future Improvements ✨
 - Add a graphical user interface (GUI) for enhanced usability.
 - Implement advanced reporting and analytics.
 - Integrate multi-factor authentication for improved security.
 
-## License
+## License 📝
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-Made with ❤️ by [Your Name](https://github.com/yourusername).
+Made with ❤️ by [Mukhammed Lolo](https://github.com/thewhitemage13).
