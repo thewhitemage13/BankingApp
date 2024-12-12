@@ -90,9 +90,6 @@ The project leverages modern tools and technologies:
 - Implement advanced reporting and analytics.
 - Integrate multi-factor authentication for improved security.
 
-## License 📝
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Links 🔗
 - [Documentation](https://thewhitemage13.github.io/BankingApp/)
 
